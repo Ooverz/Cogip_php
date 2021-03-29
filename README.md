@@ -23,6 +23,6 @@
 3. `The connection` to the database.
 4. `GRUD`. 
 5. `Design`.
-6. Document fot (Invoice, companies, Employees).
+6. Document for (Invoice, companies, Employees).
 
 ## the Digram 
