@@ -1,7 +1,7 @@
 {
   "name": "Cogip_php",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Using different `URL`.\r * `Sanitization` to avoid SQL.\r * `Validation` of Data.\r * `Relational` database.\r * Correct `join` in SQL.\r * Using `Aliases` in SQL request.\r * Implementation of a `GRUD`.",
   "main": "index.js",
   "scripts": {
     "scss": "node-sass --watch src/assets/scss --output src/assets/css --source-map true"
