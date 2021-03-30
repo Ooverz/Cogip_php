@@ -1,7 +1,7 @@
 <?php
-include "include/header.php";
+require_once "include/header.php";
 
-include "include/Last5display.php";
+require_once "include/Last5display.php";
 
-include "include/footer.php";
+require_once "include/footer.php";
 ?>
