@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 
 class Manager
 {
@@ -15,4 +15,5 @@ class Manager
             die('Error :' .$e->getMessage());
         }
     }
+
 }

@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+
 
 require_once('./Model/CompaniesManager.php');
 require_once('./Model/InvoicesManager.php');
@@ -19,6 +19,5 @@ class HomepageController
        $contacts = new ContactsManager();
 
         require('./view/Welcome.php');
-
     }
 }

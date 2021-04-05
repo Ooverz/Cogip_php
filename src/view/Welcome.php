@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
-require_once "include/header.php";
+require_once("include/header.php");
+
 ?>
 
 <h2 class="my-4 d-flex justify-content-center"> Welcome to COGIP </h2>
@@ -59,4 +60,4 @@ require_once "include/header.php";
       <?php endforeach ?>
     </table>
 
-<?php require_once "include/footer.php"; ?>
+<?php require_once("include/footer.php"); ?>

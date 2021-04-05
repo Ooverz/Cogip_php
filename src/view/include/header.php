@@ -12,10 +12,8 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-     integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-     integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <title>Cogip</title>
 </head>
 <body style="font-family: 'Inconsolata', monospace">
@@ -35,13 +33,13 @@
           <a class="nav-link" aria-current="page" href="/index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="view/Invoices.php">Invoices</a>
+          <a class="nav-link" href="/?page=invoices">Invoices</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="view/Companies.php">Companies</a>
+          <a class="nav-link" href="/?page=companies">Companies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="view/Contacts.php">Contacts</a>
+          <a class="nav-link" href="/?page=contacts">Contacts</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-target="#"
@@ -50,7 +48,7 @@
             Admin
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item"  href="/view/Dashboard.php">Dashboard</a></li>
+            <li><a class="dropdown-item"  href="/?page=dashboard">Dashboard</a></li>
             <li><a class="dropdown-item"  href="#">New contact</a></li>
             <li><a class="dropdown-item"  href="#">New invoice</a></li>
             <li><a class="dropdown-item"  href="#">New company</a></li>
