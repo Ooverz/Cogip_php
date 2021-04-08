@@ -19,6 +19,8 @@
               <form method="POST" action= "">
                   <th><button type="submit" class="btn btn-link"  name="invoice"><?= $invoice['invoice_number'] ?></button></th>
                   <input type="hidden" name="number" value="<?= $invoice['invoice_number']  ?>">
+                  <input type="hidden" name="invoice_id" value="<?= $invoice['invoice_id']  ?>">
+                  <input type="hidden" name="invoice_id" value="<?= $invoice['invoice_id']  ?>">
                 </form>
                   <th><?= $invoice['invoice_date'] ?></th>
                   <th><?= $invoice['company_name']?></th>
@@ -40,7 +42,7 @@
               </tr>
             </thead>
               <tr>
-              <?php foreach($invoices->detailsCompanyInvoice() as $company) : ?>
+              <?php foreach($invoices->detailsCompanyInvoice($_POST['invoice_id']) as $company) : ?>
                 <th><?= $company['company_name'] ?></th>
                 <th><?= $company['VAT_number'] ?></th>
                 <th><?= $company['company_type']?></th>
@@ -57,7 +59,7 @@
                   </tr>
                 </thead>
                   <tr>
-                  <?php foreach($invoices->detailsContactInvoice() as $contact) : ?>
+                  <?php foreach($invoices->detailsContactInvoice($_POST['invoice_id']) as $contact) : ?>
                     <th><?= $contact['first_name'].' '. $contact['last_name'] ?></th>
                     <th><?= $contact['email'] ?></th>
                   </tr>

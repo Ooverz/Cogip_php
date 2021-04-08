@@ -20,6 +20,7 @@
               <input type="hidden" name="contact" value="<?= $contact['first_name'].' '. $contact['last_name'] ?>">
               <input type="hidden" name="company" value="<?= $contact['company_name'] ?>">
               <input type="hidden" name="email" value="<?= $contact['email'] ?>">
+              <input type="hidden" name="invoice_id" value="<?= $contact['invoice_id'] ?>">
             </form>
             <th><?= $contact['email'] ?></th>
             <th><?= $contact['company_name'] ?></th>
@@ -31,16 +32,15 @@
         <h4 class="mx-4">Company: <?=  $_POST['company'] ?></h4>
         <h4 class="mx-4">Email: <?=  $_POST['email'] ?></h4>
         <p class="fs-5 mx-4">Contact person for these invoices:  </p>
-
         <table class="table mx-4">
           <thead>
             <tr>
-              <th scope="col">Invoice number</th>
+              <th scope="col" width="40%">Invoice number</th>
               <th scope="col">Date</th>
             </tr>
           </thead>
           <tr>
-            <?php foreach ($contacts->invoiceDetails() as $contact) : ?>
+            <?php foreach ($contacts->invoiceDetails($_POST['invoice_id']) as $contact) : ?>
               <th><?= $contact['invoice_number'] ?></th>
                 <th><?= $contact['invoice_date'] ?></th>
               </tr>

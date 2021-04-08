@@ -21,7 +21,9 @@
               <form method="POST" action= "">
               <th><button type="submit" class="btn btn-link" name="client"><?= $company['company_name'] ?></button></th>
               <input type="hidden" name="vat" value="<?= $company['VAT_number'] ?>">
-              <input type="hidden" name="type" value="<?= $company['company_type']?>">
+              <input type="hidden" name="type" value="Client">
+              <input type="hidden" name="employee_id" value="<?= $company['employee_id']?>">
+              <input type="hidden" name="invoice_id" value="<?= $company['invoice_id']?>">
               </form>
               <th><?= $company['VAT_number'] ?></th>
               <th><?= $company['country'] ?></th>
@@ -44,7 +46,9 @@
               <form method="POST" action="">
               <th><button type="submit" class="btn btn-link" name="provider"><?= $company['company_name'] ?></a></th>
               <input type="hidden" name="vat" value="<?= $company['VAT_number'] ?>">
-              <input type="hidden" name="type" value="<?= $company['company_type']?>">
+              <input type="hidden" name="type" value="provider">
+              <input type="hidden" name="employee_id" value="<?= $company['employee_id']?>">
+              <input type="hidden" name="invoice_id" value="<?= $company['invoice_id']?>">
             </form>
               <th><?= $company['VAT_number'] ?></th>
               <th><?= $company['country'] ?></th>
@@ -64,7 +68,7 @@
                   </tr>
                 </thead>
                   <tr>
-                  <?php foreach($companies->contactDetails() as $company) : ?>
+                  <?php foreach($companies->contactDetails($_POST['employee_id']) as $company) : ?>
                     <th><?= $company['first_name'].' '. $company['last_name'] ?></th>
                     <th><?= $company['email'] ?></th>
                   </tr>
@@ -80,7 +84,7 @@
                     </tr>
                   </thead>
                   <tr>
-                    <?php foreach ($companies->invoiceDetails() as $company) : ?>
+                    <?php foreach ($companies->invoiceDetails($_POST['invoice_id']) as $company) : ?>
                       <th><?= $company['invoice_number'] ?></th>
                       <th><?= $company['invoice_date'] ?></th>
                       <th><?= $company['first_name']. ' ' . $company['last_name'] ?></th>
@@ -104,7 +108,7 @@
                 </tr>
               </thead>
                 <tr>
-                <?php foreach($companies->contactDetails() as $company) : ?>
+                <?php foreach($companies->contactDetails($_POST['employee_id']) as $company) : ?>
                   <th><?= $company['first_name'].' '. $company['last_name'] ?></th>
                   <th><?= $company['email'] ?></th>
                 </tr>
@@ -120,7 +124,7 @@
                 </tr>
               </thead>
               <tr>
-                <?php foreach ($companies->invoiceDetails() as $company) : ?>
+                <?php foreach ($companies->invoiceDetails($_POST['invoice_id']) as $company) : ?>
                   <th><?= $company['invoice_number'] ?></th>
                   <th><?= $company['invoice_date'] ?></th>
                   <th><?= $company['first_name']. ' ' . $company['last_name'] ?></th>
